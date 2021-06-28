@@ -1,0 +1,63 @@
+* {
+
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-image:url("../../img/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg");
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#fe9d38; 
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Box {
+
+    text-align: center;
+    background: rgba(27, 27, 27, 0.95);
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-align: center;
+}
+
+.inputDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.input{
+
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    width: 300px;
+
+}
+
+.Btn {
+
+    border-radius: 8px;
+    background-color: #fe9d38;
+    color: #000;
+    padding: 8px;
+    width: 80px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Btn:hover {
+background-color: #000;
+color: #fe9d38;
+}
