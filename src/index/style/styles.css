@@ -22,8 +22,8 @@ body {
     text-align: center;
     background: rgba(27, 27, 27, 0.95);
     max-width: 640px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 10px;
     border-radius: 10px;
     font-size: 30px;
     box-align: center;
@@ -41,6 +41,7 @@ body {
 
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 30px;
     font-size: 15px;
     width: 300px;
 
@@ -53,11 +54,11 @@ body {
     color: #000;
     padding: 8px;
     width: 80px;
-
+    margin-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Btn:hover {
-background-color: #ffff;
+background-color: #000;
 color: #fe9d38;
 }
