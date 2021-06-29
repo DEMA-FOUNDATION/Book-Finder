@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-image:url("../../img/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg");
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#fe9d38; 
     align-items: center;
@@ -27,6 +28,51 @@ body {
     border-radius: 10px;
     font-size: 30px;
     box-align: center;
+}
+
+.Image{
+
+    width: 100px;
+    height: 150px;
+    margin-left: 20px;
+
+}
+.Result-box{
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(27, 27, 27, 0.95);
+    max-width: 740px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+
+table {
+
+
+  max-width: 720px !important;
+  width: 680px;
+
+}
+
+
+tr {
+
+    width: 100%;
+
+
+}
+
+td {
+
+   width: 100%;
+
+
 }
 
 .inputDiv{
