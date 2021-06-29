@@ -33,6 +33,7 @@ class Response {
 
         const {items} = json;
         const table = document.createElement('table');
+        table.classList.add('Table');
 
         for(let i in items) {
 

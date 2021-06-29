@@ -10,6 +10,7 @@ body {
     padding: 0;
     background-image:url("../../img/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg");
     background-size: cover;
+    background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#fe9d38; 
     align-items: center;
@@ -48,6 +49,30 @@ body {
     padding: 20px;
     border-radius: 10px;
     font-size: 30px;
+}
+
+
+table {
+
+
+  max-width: 720px !important;
+  width: 680px;
+
+}
+
+
+tr {
+
+    width: 100%;
+
+
+}
+
+td {
+
+   width: 100%;
+
+
 }
 
 .inputDiv{
