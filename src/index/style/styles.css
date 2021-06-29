@@ -8,11 +8,11 @@ body {
 
     margin: 0;
     padding: 0;
-    background-image:url("../../img/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg");
+    background-image:url("../../img/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#fcb76d; 
+    color:#f0ecef; 
     align-items: center;
     justify-content: center;
 
@@ -21,7 +21,7 @@ body {
 .Box {
 
     text-align: center;
-    background: rgba(27, 27, 27, 0.95);
+    background: rgba(27, 27, 27, 0.90);
     max-width: 640px;
     margin: 50px auto;
     padding: 20px;
@@ -51,7 +51,6 @@ body {
     font-size: 30px;
 }
 
-
 table {
 
 
@@ -63,14 +62,18 @@ table {
 
 tr {
 
+
     width: 100%;
+   
 
 
 }
 
 td {
 
-   width: 100%;
+    width: 100%;
+
+
 
 
 }
@@ -95,7 +98,7 @@ td {
 .Btn {
 
     border-radius: 8px;
-    background-color: #fcb76d;
+    background-color: #f0ecef;
     color: #000;
     padding: 8px;
     width: 80px;
@@ -104,6 +107,75 @@ td {
 }
 
 .Btn:hover {
-background-color: rgb(0, 0, 0);
-color: #fcb76d;
+background-color: rgb(201, 77, 176);
+color: #f0ecef;
+}
+
+
+.loading-screen {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+
+.loading{
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loading span{
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    margin: 4px;
+    animation: scale 1.5s linear infinite;
+}
+
+@keyframes scale{
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.loading span:nth-child(1){
+    border-radius: 50% 50% 0 50%;
+    background-color: #e77f67;
+    transform-origin: bottom right;
+}
+
+.loading span:nth-child(2){
+    border-radius: 50% 50% 50% 0;
+    background-color: #778beb;
+    transform-origin: bottom left;
+    animation-delay: .5s;
+}
+
+.loading span:nth-child(3){
+    border-radius: 50% 0 50% 50%;
+    background-color: #f8a5c2;
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+
+.loading span:nth-child(4){
+    border-radius: 0 50% 50% 50%;
+    background-color: #f5cd79;
+    transform-origin: top left;
+    animation-delay: 1s;
 }

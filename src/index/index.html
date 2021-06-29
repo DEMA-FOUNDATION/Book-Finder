@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="Box">
-        <h1>Book finder</h1>
+        <h1>Book Finder</h1>
         <div class="inputDiv">
             <input type="text" class="input" placeholder="Search your book..." >
         </div>
@@ -17,8 +17,17 @@
     </section>
     <section  id="UnderBox">
         <div class="result"></div>
+        <div class="loading-screen hidden"  id="loading">
+            <div class="loading">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
     </section>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../script/index.js"></script>
 </body>
 </html>

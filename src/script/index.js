@@ -10,23 +10,37 @@ class Response {
         this.Search();
     }
 
-    async Search() {
-
+    Search() {
 
         btn.addEventListener('click', (e) => {
 
-            section.classList.add('Result-box');
-            
-            const value = input.value.replace(' ', '+').toLowerCase();
-            const URL = `https://www.googleapis.com/books/v1/volumes?q=${value}`
-        
-            fetch(URL)
-            .then(res => res.json())
-            .then((out) => this.loadElements(out)).catch(err => { throw err });
-        
-            console.log(URL);
-        
+            if(!input.value.length){
+
+                return;
+            }
+
+           this.getData();
+   
         });
+    }
+
+    async getData(){
+
+        const loading = document.querySelector('#loading');
+            console.log(loading);
+            loading.classList.remove('hidden');
+
+            const value = input.value.replace(' ', '+').toLowerCase();
+            const URL = `https://www.googleapis.com/books/v1/volumes?q=${value}`;
+
+            const {data} = await axios.get(URL);
+
+            this.loadElements(data).catch(err => { throw err });
+            loading.classList.add('hidden');
+            
+            section.classList.add('Result-box');
+
+
     }
 
     async loadElements(json) {
@@ -40,7 +54,7 @@ class Response {
             try{
                 const {volumeInfo} = items[i];
                 const {imageLinks} = volumeInfo;
-                console.log(imageLinks);
+                
                 const ThumbNails = imageLinks.thumbnail; 
                 const {authors} = volumeInfo;
                 const {title} = volumeInfo;
@@ -61,7 +75,7 @@ class Response {
 
             } catch(e) {
 
-                console.log(e);
+                console.log('Erro: ', e);
 
             } finally{}
         }
