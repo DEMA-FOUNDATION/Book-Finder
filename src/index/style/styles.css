@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#fe9d38; 
+    color:#fcb76d; 
     align-items: center;
     justify-content: center;
 
@@ -95,7 +95,7 @@ td {
 .Btn {
 
     border-radius: 8px;
-    background-color: #fe9d38;
+    background-color: #fcb76d;
     color: #000;
     padding: 8px;
     width: 80px;
@@ -104,6 +104,6 @@ td {
 }
 
 .Btn:hover {
-background-color: #ffff;
-color: #fe9d38;
+background-color: rgb(0, 0, 0);
+color: #fcb76d;
 }
