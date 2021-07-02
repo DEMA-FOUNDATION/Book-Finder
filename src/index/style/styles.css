@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:#f0ecef; 
+    color: #ffff; 
     align-items: center;
     justify-content: center;
 
@@ -21,7 +21,7 @@ body {
 .Box {
 
     text-align: center;
-    background: rgba(27, 27, 27, 0.90);
+    background: rgba(27, 27, 27, 0.80);
     max-width: 640px;
     margin: 50px auto;
     padding: 20px;
@@ -37,46 +37,24 @@ body {
     margin-left: 20px;
 
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .Result-box{
 
     display: flex;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(27, 27, 27, 0.95);
-    max-width: 740px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 30px;
-}
-
-table {
-
-
-  max-width: 720px !important;
-  width: 680px;
-
+    flex-direction: column;
+    flex-basis: 50%;
+    flex: 1;
 }
 
 
-tr {
-
-
-    width: 100%;
-   
-
-
-}
-
-td {
-
-    width: 100%;
-
-
-
-
-}
 
 .inputDiv{
 
@@ -98,17 +76,16 @@ td {
 .Btn {
 
     border-radius: 8px;
-    background-color: #f0ecef;
+    background-color: #ffff;
     color: #000;
     padding: 8px;
     width: 80px;
-
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Btn:hover {
-background-color: rgb(201, 77, 176);
-color: #f0ecef;
+background-color:#F97862;
+color: #ffff;
 }
 
 
@@ -123,6 +100,68 @@ color: #f0ecef;
 
     display: none;
 
+}
+
+.card{
+    
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color:rgba(27, 27, 27, 0.80);
+    width: 380px;
+    height:408px;
+    margin: 46px;
+    max-width: 512px;
+    padding: 10px;
+}
+
+.result-div {
+
+    display: flex;
+    flex-direction:row;
+}
+
+.card-body{
+
+    margin-left: 5%;
+
+}
+
+
+.book-name {
+
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+}
+
+.button {
+
+    /*background: #f8a5c2;*/
+    background: #ffff;
+    color: #000;
+    padding: 8px;
+    width: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+
+}
+
+.button:hover{
+    background-color: #f8a5c2;
+}
+
+.info {
+
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+    
 }
 
 

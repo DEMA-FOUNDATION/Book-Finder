@@ -20,7 +20,18 @@ class Response {
             }
 
            this.getData();
-   
+        });
+
+       
+
+        input.addEventListener('keypress', (e) => {
+
+            if(e.keyCode === 13){
+
+                if(!input.value) return;
+
+                this.getData();
+            }
         });
     }
 
@@ -39,54 +50,89 @@ class Response {
             loading.classList.add('hidden');
             
             section.classList.add('Result-box');
-
-
     }
 
     async loadElements(json) {
 
         const {items} = json;
-        const table = document.createElement('table');
-        table.classList.add('Table');
 
+        const div = document.createElement('div');
+        div.setAttribute('class', 'row');
+        
         for(let i in items) {
 
             try{
+
+                const resultDiv = document.createElement('div');
+                resultDiv.setAttribute('class', 'result-div');
+                 
                 const {volumeInfo} = items[i];
-                const {imageLinks} = volumeInfo;
-                
-                const ThumbNails = imageLinks.thumbnail; 
-                const {authors} = volumeInfo;
+                const {previewLink} = volumeInfo;
                 const {title} = volumeInfo;
+                const {authors} = volumeInfo;
+                const {imageLinks} = volumeInfo;
+                console.log(volumeInfo);
+                const ThumbNails = imageLinks.smallThumbnail; 
+                
 
-                const tr = document.createElement('tr');
+                const card = document.createElement('div');
+                card.setAttribute('class', 'card col-md-6');
+                card.setAttribute('style', 'max-width: 32rem;');
 
-                let TittleTd = document.createElement('td');
-                TittleTd.innerHTML = title;
-                tr.appendChild(TittleTd);
+                const book = document.createElement('img');
+                book.setAttribute('class', 'Image');
+                book.src = ThumbNails;
 
-                let ImageTd = document.createElement('td');
-                const image = document.createElement('img');
-                image.classList.add('Image');
-                image.src = ThumbNails
-                ImageTd.appendChild(image);
-                tr.appendChild(ImageTd);
-                table.appendChild(tr)
+                card.appendChild(book);
 
+                const cardBody = document.createElement('div');
+                cardBody.setAttribute('class', 'card-body');
+
+                const bookName = document.createElement('h5');
+                bookName.setAttribute('class', 'book-name');
+                bookName.innerHTML = title;
+
+                cardBody.appendChild(bookName);
+
+                const button = document.createElement('button');
+                button.setAttribute('class', 'button btn-primary btn-md');
+                button.onclick =  () =>  {window.open(previewLink)}
+                button.innerHTML = 'Preview';
+
+                cardBody.appendChild(button);
+
+                const info = document.createElement('p');
+                info.setAttribute('class', 'info');
+                info.innerHTML = `By: ${authors}`;
+
+                cardBody.appendChild(info);
+
+
+                card.appendChild(cardBody);
+                
+                if(resultDiv.hasChildNodes()){
+                    resultDiv.removeChild(resultDiv.lastChild);
+                }
+          
+                resultDiv.appendChild(card);
+
+                div.appendChild(resultDiv);
+
+                if(section.hasChildNodes()){
+                    section.removeChild(section.lastChild);
+                }
+
+                section.appendChild(div);
+            
             } catch(e) {
 
                 console.log('Erro: ', e);
 
-            } finally{}
+            } 
+            
         }
-
-        const result = document.querySelector('.result');
-        if(result.hasChildNodes()){
-            result.removeChild(result.lastChild);
-        } 
-        result.appendChild(table);
-
     }
+
 }
 
 const test = new Response();
