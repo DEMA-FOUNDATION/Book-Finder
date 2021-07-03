@@ -66,18 +66,20 @@ body {
 
 .input{
 
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
     font-size: 15px;
     width: 300px;
+    margin-left: 5%;
 
 }
 
 .Btn {
 
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: #ffff;
     color: #000;
+    margin-left: 2%;
     padding: 8px;
     width: 80px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -138,6 +140,28 @@ color: #ffff;
 
 }
 
+.categories{
+
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.info {
+
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.btnDiv{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right: 30%;
+}
+
 .button {
 
     /*background: #f8a5c2;*/
@@ -150,19 +174,27 @@ color: #ffff;
 
 }
 
+.BuyBtn {
+
+    /*background: #f8a5c2;*/
+    background: #ffff;
+    color: #000;
+    margin-left: 3%;
+    padding: 8px;
+    width: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 8px;
+
+}
+
 .button:hover{
-    background-color: #f8a5c2;
+    background-color: #fda58b;
 }
 
-.info {
-
-    font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-
-
-    
+.BuyBtn:hover{
+    background-color: #02dae9;
 }
+
 
 
 .loading{

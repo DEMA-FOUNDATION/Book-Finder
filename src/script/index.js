@@ -67,14 +67,18 @@ class Response {
                 resultDiv.setAttribute('class', 'result-div');
                  
                 const {volumeInfo} = items[i];
-                const {previewLink} = volumeInfo;
-                const {title} = volumeInfo;
-                const {authors} = volumeInfo;
-                const {imageLinks} = volumeInfo;
-                console.log(volumeInfo);
+                const {
+                    previewLink,
+                    title,
+                    authors,
+                    categories,
+                    publisher,
+                    infoLink,
+                    imageLinks,        
+                } = volumeInfo;
                 const ThumbNails = imageLinks.smallThumbnail; 
+                console.log(volumeInfo);
                 
-
                 const card = document.createElement('div');
                 card.setAttribute('class', 'card col-md-6');
                 card.setAttribute('style', 'max-width: 32rem;');
@@ -94,19 +98,43 @@ class Response {
 
                 cardBody.appendChild(bookName);
 
-                const button = document.createElement('button');
-                button.setAttribute('class', 'button btn-primary btn-md');
-                button.onclick =  () =>  {window.open(previewLink)}
-                button.innerHTML = 'Preview';
+                const category = document.createElement('p');
+                category.setAttribute('class', 'categories');
+                category.innerHTML = `Category: ${categories}`;
 
-                cardBody.appendChild(button);
+                cardBody.appendChild(category);
 
+                const Publisher = document.createElement('p');
+                Publisher.setAttribute('class', 'categories');
+                Publisher.innerHTML = `Publisher: ${publisher}`;
+
+                cardBody.appendChild(Publisher);
+                
                 const info = document.createElement('p');
                 info.setAttribute('class', 'info');
                 info.innerHTML = `By: ${authors}`;
 
                 cardBody.appendChild(info);
 
+
+                const btnDiv = document.createElement('div');
+                btnDiv.setAttribute('class', 'btnDiv');
+                
+                const button = document.createElement('button');
+                button.setAttribute('class', 'button btn-primary btn-md');
+                button.onclick =  () =>  {window.open(previewLink)}
+                button.innerHTML = 'Preview';
+
+                btnDiv.appendChild(button);
+
+                const BuyBtn = document.createElement('button');
+                BuyBtn.setAttribute('class', 'BuyBtn btn-primary btn-md');
+                BuyBtn.onclick =  () =>  {window.open(infoLink)}
+                BuyBtn.innerHTML = 'Buy';
+
+                btnDiv.appendChild(BuyBtn);
+
+                cardBody.appendChild(btnDiv);
 
                 card.appendChild(cardBody);
                 
