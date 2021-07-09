@@ -20,6 +20,7 @@ class Response {
             }
 
            this.getData();
+           input.value = '';
         });
 
        
@@ -31,6 +32,7 @@ class Response {
                 if(!input.value) return;
 
                 this.getData();
+                input.value = '';
             }
         });
     }

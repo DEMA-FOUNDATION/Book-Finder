@@ -21,7 +21,8 @@ body {
 .Box {
 
     text-align: center;
-    background: rgba(27, 27, 27, 0.80);
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
     max-width: 640px;
     margin: 50px auto;
     padding: 20px;
@@ -35,7 +36,6 @@ body {
     width: 100px;
     height: 150px;
     margin-left: 20px;
-
 }
 
 .row {
@@ -110,12 +110,20 @@ color: #ffff;
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    background-color:rgba(27, 27, 27, 0.80);
+    background-color:rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000;
     width: 380px;
     height:408px;
     margin: 46px;
-    max-width: 512px;
+    max-width: 380px;
     padding: 10px;
+    transition: transform 100ms ease-in-out;
+}
+.card:hover {
+
+    transform: scale(1.05);
+
 }
 
 .result-div {
